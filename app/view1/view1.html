@@ -1,0 +1,961 @@
+<style type="text/css">
+    .hero-section{
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    }
+    .switcher-icon img {
+    width: 35px;
+    }
+    .navbar-brand {
+    padding-top: 15px!important;
+    }
+    .switch_icon{
+    padding-top: 3px !important;
+    padding-bottom: 0px !important;
+    }
+    .img-right{
+    background: url('assets/images/talent/img-right.jpg') 50% 0 no-repeat;
+    background-size: cover;
+    }
+    .slick-slide {
+    outline: none !important;
+    }
+    #owl-carousel-shots-phone .owl-wrapper-outer{
+    overflow: visible;
+    }
+    .slick-dots{
+    bottom: -120px;
+    }
+    .vbox-close{
+    z-index: 99999;
+    margin-top: 60px;
+    position: absolute;
+    }
+    h2,h3{
+    font-weight: 500;
+    }
+    .footer{
+    position: relative;
+    }
+    /*ljskdjfjsd*/
+    /* The only rule that matters */
+    #video-background {
+    /*  making the video fullscreen  */
+    position: fixed;
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    }
+
+    .navi li a.active{
+    	color: #c0392b;
+    }
+    .header.youtube-bg .overlay {
+    height: 570px;
+}
+    /*ljskdjfjsd*/
+</style>
+<div class="main-wrapper" >
+    <!-- =========================
+        PRELOADER
+        ============================== -->
+
+	    <div class="preloader" ng-show="pre_loader" >
+        <div class="loader-container">
+            <div class="text-logo">MedMatch</div>
+            <div class="signal" ></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- =========================
+        HEADER
+        ============================== -->
+    <header class="header solid-bg youtube-bg" id="top" style="position: relative;">
+        <!-- <span id="controlBar_P1" class="mb_YTVPBar inlinePlayer" style="white-space: nowrap; position: absolute; z-index: 1000;">
+            <div class="buttonBar"><span class="mb_YTVPPlaypause ytpicon">P</span><span class="mb_YTVPMuteUnmute ytpicon">A</span><span class="mb_YTVPTime">00 : 01 / 02 : 08</span><span class="mb_YTVPUrl ytpicon" title="view on YouTube">Y</span><span class="mb_OnlyYT ytpicon">O</span></div>
+            <div class="mb_YTVPProgress" style="position: absolute;">
+                <div class="mb_YTVPLoaded" style="position: absolute; left: 0px; width: 4.16507%;"></div>
+                <div class="mb_YTVTime" style="position: absolute; left: 0px; width: 10.5391px;"></div>
+            </div>
+            </span> -->
+        <!-- <div class="mbYTP_wrapper" id="wrapper_mbYTP_P1" style="position: absolute; z-index: 0; min-width: 100%; min-height: 100%; left: 0px; top: 0px; overflow: hidden; opacity: 1; transition-property: opacity; transition-duration: 2000ms;">
+            <iframe setmute id="mbYTP_P1" class="playerBox" style="position: absolute; z-index: 0; top: 0px; left: 0px; overflow: hidden; opacity: 1; width: 1772.76px; height: 859px; margin-top: -104.5px; margin-left: -211.88px;" frameborder="0" allowfullscreen="1" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/av4fYZOr7zI?autoplay=0&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;version=3&amp;playerapiid=mbYTP_P1&amp;origin=https%3A%2F%2Fwww.medmatchjobs.com&amp;allowfullscreen=true&amp;wmode=transparent&amp;iv_load_policy=3&amp;html5=1&amp;widgetid=1" __idm_id__="231885825"></iframe>
+            <div class="YTPOverlay" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            </div> -->
+        <!-- <div style="position: absolute; z-index: -1; top: 0px; left: 0px; bottom: 0px; right: 0px; overflow: hidden; background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; background-image: url(&quot;assets/images/video/ocean.jpg&quot;);">
+            <video autoplay="" loop="" style="visibility: hidden; margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <source src="assets/images/video/ocean.mp4" type="video/mp4">
+                <source src="assets/images/video/ocean.webm" type="video/webm">
+                <source src="assets/images/video/ocean.ogv" type="video/ogg">
+            </video>
+            </div> -->
+        <!-- <iframe id="mbYTP_P1" class="playerBox" style="position: absolute; z-index: 0; top: 0px; left: 0px; overflow: hidden; opacity: 1; width: 1772.76px; height: 859px; margin-top: -104.5px; margin-left: -211.88px;" frameborder="0" allowfullscreen="1" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/av4fYZOr7zI?autoplay=0&amp;modestbranding=1&amp;controls=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;version=3&amp;playerapiid=mbYTP_P1&amp;origin=https%3A%2F%2Fwww.medmatchjobs.com&amp;allowfullscreen=true&amp;wmode=transparent&amp;iv_load_policy=3&amp;html5=1&amp;widgetid=1" __idm_id__="653520897"></iframe>
+            -->
+        <video autoplay loop id="video-background" muted plays-inline >
+            <source src="assets/images/talent/bg_video.MKV" type="video/mp4">
+        </video>
+        <!-- <div>
+            <video  autoplay="true" style="position: absolute;">
+            	<source src="assets/images/video/ocean.mp4" type="video/mp4">
+            </video>
+            </div>
+            -->
+        <!-- Background Overlay -->
+        <div class="overlay" style="position: relative;">
+            <!-- Youtube Video Header Background -->
+            <div id="P1" class="player mb_YTVPlayer isMuted" style="display: none; margin: auto; background: none rgba(0, 0, 0, 0.5);" data-property="{videoURL:'http://youtu.be/av4fYZOr7zI',containment:'#top',startAt:0,mute:true,autoPlay:true,loop:false,opacity:1}"></div>
+            <!-- =========================================
+                Navigation
+                ========================================== -->
+            <nav ng-class="scrollPosition >= 100 ? 'is-scrolling':'' "  class="navbar navbar-fixed-top" role="navigation">
+                <div class="container" ng-init="drop_menu= false">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Navbar-Header -->
+                            <div class="navbar-header">
+                                <!-- Mobile Menu -->
+                                <button ng-click="drop_menu = !drop_menu" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <i class="icon icon_menu"></i>
+                                </button>
+                                <!-- Image-Logo: Remove this comments and the section above Text-Logo if you want to add an Image-Logo (recommended sizes -> max-height:50, max-width:200)-->
+                                <a href="#top" class="navbar-brand img-logo scrollto" title="MedMatch">
+                                <img src="assets/images/talent/white-logo.png" alt="Logo">
+                                </a>
+                            </div>
+                            <!-- /End Navbar-Header -->
+                            <!-- Navbar-Collapse -->
+                            <div ng-class="drop_menu ? 'animated slideInDown in ':''" class="navbar-collapse collapse" style="max-height: 222px;">
+                                <ul class="nav navbar-nav navbar-right navi">
+                                    <!-- Menu Items -->
+                                    <li><a href="https://www.medmatchjobs.com/home/employer" title="Switch to Recruiter" class="switcher-icon switch_icon"><img src="assets/images/talent/HospitalIcon.png"></a></li>
+                                    <li><a href="#about" du-smooth-scroll du-scrollspy  duration="1600" title="" class="scrollto">About</a></li>
+                                    <li><a href="#features" du-smooth-scroll du-scrollspy  duration="1600" title="" class="scrollto">Features</a></li>
+                                    <!-- <li><a href="#testimonials" title="" class="scrollto">Testimonials</a></li> -->
+                                    <li><a href="#mobile-download" du-smooth-scroll du-scrollspy duration="1600" title="" class="scrollto">Mobile</a></li>
+                                    <!-- Login and Signup Modal on click -->
+                                    <li><a class="btn btn-nav" href="https://www.medmatchjobs.com/login">Login</a></li>
+                                    <li><a class="btn btn-nav btn-color" href="https://www.medmatchjobs.com/home/login_jobseeker/signup">Sign Up</a></li>
+                                </ul>
+                            </div>
+                            <!--/End Navbar-Collapse -->
+                        </div>
+                        <!--/End Col -->
+                    </div>
+                    <!--/End Row -->
+                </div>
+                <!--/End Container -->
+            </nav>
+            <!--/End Sticky Navigation -->
+            <!--=========================================
+                Login/Signup Bootstrap Modal
+                ========================================== -->
+            <div class="modal fade login" id="loginModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!--Modal-Header -->
+                        <div class="modal-header">
+                            <!--Close Button -->
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="icon icon_close_alt2"></i>
+                            </button>
+                            <!--Modal-Header Title-->
+                            <h4 class="modal-title">Sign in to <span>MedMatch</span></h4>
+                            <p class="modal-subtitle">Enter your email and password</p>
+                        </div>
+                        <!--/End Modal-Header -->
+                        <!--Modal-Body Content -->
+                        <div class="modal-body">
+                            <div class="box">
+                                <div class="content">
+                                    <!--Login Form -->
+                                    <div class="loginBox">
+                                        <form id="login-modal" role="form">
+                                            <!--Success/Alert Notification -->
+                                            <p class="lm-success"><i class="icon icon_check_alt2"></i> <strong>Congratulation!Login modal validation is working. Implement your code.</strong></p>
+                                            <p class="lm-failed"><i class="icon icon_close_alt2"></i><strong> Something went wrong!Insert correct value.</strong></p>
+                                            <!--Input Fields -->
+                                            <input id="lm-email" class="form-control input-lg" type="text" placeholder="Email" name="lm-email" required="">
+                                            <input id="lm-password" class="form-control input-lg" type="password" placeholder="Password" name="lm-password" required="">
+                                            <!--Login Button -->
+                                            <button class="btn btn-color">Login</button>
+                                        </form>
+                                    </div>
+                                    <!--/End Login Form -->
+                                </div>
+                            </div>
+                            <!--/End Login Form Box -->
+                            <div class="box">
+                                <!--Signup Form -->
+                                <div class="content registerBox" style="display:none;">
+                                    <form id="signup-modal" role="form">
+                                        <!--Success/Alert Notification -->
+                                        <p class="sm-success"><i class="icon icon_check_alt2"></i> <strong>
+                                            Congratulation!Signup modal validation is working. Implement your code.</strong>
+                                        </p>
+                                        <p class="sm-failed"><i class="icon icon_close_alt2"></i><strong> Something went wrong!Insert correct value.</strong></p>
+                                        <!--Input Fields -->
+                                        <input id="sm-email" class="form-control input-lg" type="text" placeholder="Email" name="sm-email" required="">
+                                        <input id="sm-password" class="form-control input-lg" type="password" placeholder="Password" name="sm-password">
+                                        <input id="sm-confirm" class="form-control input-lg" type="password" placeholder="Repeat Password" name="sm-confirm">
+                                        <!--Signup Button -->
+                                        <button class="btn btn-color">Create Account</button>
+                                    </form>
+                                </div>
+                                <!--/End Signup Form -->
+                            </div>
+                            <!--/End Signup Form Box -->
+                        </div>
+                        <!--/End Modal-Body -->
+                        <!--Modal-Footer -->
+                        <div class="modal-footer">
+                            <!--Login-Footer. Redirect to Signup-Modal-->
+                            <div class="forgot login-footer">
+                                <span>Don't have an account?
+                                <a href="javascript: showRegisterForm();">Sign up Now</a>
+                                </span>
+                            </div>
+                            <!-- Signup-Footer. Redirect to Login-Modal -->
+                            <div class="forgot register-footer" style="display:none">
+                                <span>Already have an account?</span>
+                                <a href="javascript: showLoginForm();">Login</a>
+                            </div>
+                        </div>
+                        <!-- /End Modal-Footer -->
+                    </div>
+                    <!-- /End Modal Content -->
+                </div>
+                <!-- /End Modal Dialog -->
+            </div>
+            <!-- /End Modal -->
+            <!-- =========================================
+                Hero-Section
+                ========================================== -->
+            <div class="container vmiddle">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="hero-section">
+                            <!-- Welcome - Hero Message -->
+                            <h1 class="text-white"><b>Physician Job Matching...STAT</b></h1>
+                            <h3 class="text-white">Providing real-time job matches all at the tips of your fingers, while you act as your own recruiter! See where you Match, it's totally FREE.</h3>
+                            <!--Learn More Buttons -->
+                            <div class="btn-box">
+                                <a href="https://www.medmatchjobs.com/home/login_jobseeker/signup" class="btn btn-ghost">Sign Up Now</a>
+                                <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-color scrollto get-match-popup"><i class="icon arrow_carrot-2dwnn_alt"></i>Find Your Match</a>
+                            </div>
+                        </div>
+                        <!--/End Intro-Section -->
+                    </div>
+                    <!--/End Col -->
+                </div>
+                <!--/End Row -->
+            </div>
+            <!--/End Container Hero-Section -->
+        </div>
+        <!--/End Background Overlay -->
+    </header>
+    <!--======================== = /END HEADER
+        ============================== -->
+    <!--=================================
+        SECTION ABOUT - INTRO FEATURES
+        ====================================== -->
+    <section class="intro-features white-bg" id="about">
+        <div class="container">
+            <!--Padding -->
+            <div class="wrapper-lg">
+                <div class="row">
+                    <!--Section Header Title -->
+                    <div class="col-xs-12">
+                        <h2>Be Your Own Recruiter</h2>
+                        <p class="large">Match, interview, research, and schedule all in one place with total anonymity.</p>
+                    </div>
+                </div>
+                <!--Three Main Features with Icons -->
+                <div class="row">
+                    <div class="col-sm-4 intro-content">
+                        <div class="icon-lg">
+                            <i class="icon icon-mobile"></i>
+                        </div>
+                        <h4>Real-time Matches</h4>
+                        <p>Similar to what you see on matchmaking sites, we show you ideal matches based on your specific criteria. Than apply to as many as you want, all with a click of a button.</p>
+                    </div>
+                    <div class="col-sm-4 intro-content">
+                        <div class="icon-lg">
+                            <i class="icon icon-browser"></i>
+                        </div>
+                        <h4>All in One</h4>
+                        <p>Apply, interview, schedule, and analyze all jobs and employers without wasting time. Empowering you with tools and research you need before taking the next step.</p>
+                    </div>
+                    <div class="col-sm-4 intro-content">
+                        <div class="icon-lg">
+                            <i class="icon icon-documents"></i>
+                        </div>
+                        <h4>Directly Connect</h4>
+                        <p>Communicate only with employers you want, and never recruitment agencies. Your information is anonymous until both parties mutually match.</p>
+                    </div>
+                </div>
+                <!--/End Row -->
+            </div>
+            <!--/End Wrapper -->
+        </div>
+        <!--/End Container -->
+    </section>
+    <!--=============================
+        /END INTRO FEATURES
+        ============================== -->
+    <!--==================================================
+        SECTION 2 COLS - IMAGE RIGHT AND TEXT WITH CALL TO ACTION
+        ====================================================== = -->
+    <section class="img-with-action light-bg">
+        <div class="container wrapper-lg">
+            <div class="row">
+                <div class="col-lg-5 col-md-5">
+                    <!--Text Col -->
+                    <h3>Why Are We Different?</h3>
+                    <p>Physician Jobseekers waste countless hours visiting different hospitals sites, looking through different job boards, speaking to pushy recruitment agencies, and in the end of it all it feels like a lot of wasted effort. What if you could do all of that in one place? Without the hassles, and being treated like a commodity. Well, you can!With thousands of jobs, hundreds of facilities, and the ability to control the recruitment process the way you want, when you want!This is why we are different.</p>
+                    <!--Call To Action Buttons -->
+                    <div class="btn-box">
+                        <a href="#features" class="btn btn-grey scrollto">Learn More</a>
+                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-color get-match-popup"><i class="icon arrow_carrot-2dwnn_alt"></i>Try it for Free</a>
+                    </div>
+                    <!--Div Required for Correct Charts Animation -->
+                    <div class="start-charts"></div>
+                </div>
+            </div>
+            <!--/End Row-->
+        </div>
+        <!--/End Container-->
+        <!--Image Col -->
+        <div class="hidden-sm hidden-xs col-md-6 img-col-bg img-right"></div>
+    </section>
+    <!--=============================
+        /END SECTION
+        ============================== -->
+    <!--==================================================
+        CHARTS & SHOWCASE SECTION
+        ====================================================== = -->
+    <section class="charts white-bg" id="charts">
+        <div class="container">
+            <div class="wrapper-lg">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Revolutionizing Healthcare Recruitment</h2>
+                        <p class="large">First ever system that lets your match, apply, interview, and schedule on your own.</p>
+                    </div>
+                </div>
+                <div class="row doughnut-box">
+                    <div class="col-md-5">
+                        <!--Div Required for Correct Line Chart Animation -->
+                        <div class="start-line"></div>
+                        <!--Chart Text Description -->
+                        <h4>Everything You Need to be Your Own Recruiter.</h4>
+                        <p>What if you had access to all the jobs available at the tips of your fingers, and a technology that hand picked your top matches? Imagine a "eHarmony" or a "match.com" for jobs. Well, that's what we are. However, we don't just stop there!See how we are revolutionizing the way we connect you directly to In-house Physician Recruiters.</p>
+                        <p><a href="#canvas-bg" class="scrollto"><strong>Create your profile. It only takes a few minutes ›</strong></a></p>
+                    </div>
+                    <div class="col-md-7">
+                        <!--Doughnut Charts -->
+                        <div id="canvas-holder">
+                            <div class="chart-text">
+                                97%<span>Match to<br> This position</span>
+                            </div>
+                            <canvas width="400" height="400" id="chart-area" class="chart chart-doughnut"
+                                chart-data="data1" chart-labels="labels">
+                            </canvas>
+                        </div>
+                        <div id="canvas2-holder">
+                            <div class="chart2-text">
+                                14<span>Ideal Job<br>Matches</span>
+                            </div>
+                            <!--    <canvas id="chart2-area" width="300" height="300"></canvas> -->
+                            <canvas width="300" height="300" id="chart2-area" class="chart chart-doughnut"
+                                chart-data="data1" chart-labels="labels">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+                <!--/End Chart-Box -->
+                <div class="row showcase">
+                    <div class="col-md-4">
+                        <h4>Totally Mobile, so You Never Drop the Ball.</h4>
+                        <p>Manage all of your matches, interviews, and scheduling all online. We are 100% mobile, so no need to constantly check your emails and receive phone calls for small tasks. No one else can say this about their recruitment process!</p>
+                        <p><a class="signvenobox venobox play vbox-item" data-type="youtube" href="http://youtu.be/eknIvXx1hQU"><strong>Have 2 minutes? Check us out!›</strong></a></p>
+                    </div>
+                    <div class="col-md-8" ng-init="vbox_mdl= false">
+                        <!--Devices Image -->
+                        <div class="img-box">
+                            <img src="assets/images/talent/showcase.png" alt="" class="img-responsive">
+                            <a href="javascript:void(0)" ng-click="vbox_mdl=true" data-type="youtube" class="venobox video-player signvenobox vbox-item">
+                            <i class="icon arrow_triangle-right_alt2 wow fadeIn" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeIn;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--/End Chart-Box -->
+            </div>
+            <!--/End Wrapper -->
+        </div>
+        <!--/End Container -->
+    </section>
+    <!--=============================
+        /END CHARTS SECTION
+        ============================== -->
+    <!--==================================================
+        FEATURES SECTION
+        ====================================================== = -->
+    <section class="tab-features color-bg" id="features">
+        <div class="container">
+            <div class="features-title">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-white">Simple as 1- 2- 3</h2>
+                        <p class="large text-white">Check out the demo below and see how easy it can be.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!--Features Tab -->
+                <div class="tabs features tab-container" data-easytabs="true" ng-init="tab='tab1'">
+                    <ul class="etabs">
+                        <!--Feature Icon -->
+                        <li class="tab" ng-class="tab=='tab1' ? 'active':'' ">
+                            <a href="javascript:void(0)" ng-class="tab=='tab1' ? 'active':'' " ng-click = "tab = 'tab1'">
+                                <div class="icon-sm">
+                                    <i class="icon icon-layers"></i>
+                                </div>
+                                <h5 class="text-white">Input Match<br> Criteria</h5>
+                            </a>
+                        </li>
+                        <!--Feature Icon -->
+                        <li class="tab" ng-class="tab=='tab2' ? 'active':'' ">
+                            <a href="javascript:void(0)" ng-class="tab=='tab2' ? 'active':'' " ng-click = "tab = 'tab2'">
+                                <div class="icon-sm">
+                                    <i class="icon icon-pictures"></i>
+                                </div>
+                                <h5 class="text-white">Review Top<br> Matches</h5>
+                            </a>
+                        </li>
+                        <!--Feature Icon -->
+                        <li class="tab" ng-class="tab=='tab3' ? 'active':'' ">
+                            <a href="javascript:void(0)" ng-class="tab=='tab3' ? 'active':'' " ng-click = "tab = 'tab3'">
+                                <div class="icon-sm">
+                                    <i class="icon icon-grid"></i>
+                                </div>
+                                <h5 class="text-white">Apply to<br>Multiple Jobs</h5>
+                            </a>
+                        </li>
+                        <!--Feature Icon -->
+                        <li class="tab" ng-class="tab=='tab4' ? 'active':'' ">
+                            <a href="javascript:void(0)" ng-class="tab=='tab4'? 'active':'' " ng-click = "tab = 'tab4'">
+                                <div class="icon-sm">
+                                    <i class="icon icon-chat"></i>
+                                </div>
+                                <h5 class="text-white">Recorded Video <br>Interviews</h5>
+                            </a>
+                        </li>
+                        <!--Feature Icon -->
+                        <li class="tab" ng-class="tab=='tab5' ? 'active':'' ">
+                            <a href="javascript:void(0)" ng-class="tab=='tab5'? 'active':'' " ng-click = "tab = 'tab5'">
+                                <div class="icon-sm">
+                                    <i class="icon icon-lightbulb"></i>
+                                </div>
+                                <h5 class="text-white">Schedule onsite <br>Interviews</h5>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--/End Etabs -->
+                    <div class="panel-container" ng-switch = "tab">
+                        <div class="tab-content" ng-class="tab=='tab1' ? 'active animated fadeIn':' animated fadeOut'  " id="tab-feature-1" ng-switch-when = "tab1"  >
+                            <div class="container" >
+                                <div class="row">
+                                    <!--Feature Description 2cols Text-Left with Buttons -->
+                                    <div class="col-md-5 col-sm-6" >
+                                        <h4>Input Exact Criteria of Your Desired Matches and Let Us Do The Rest.</h4>
+                                        <p>We customize your ideal matches based on a combination of personal and professional criteria;
+                                            including salary, specialty, location and other important information. Once you create your profile you will be able to add additional preferences as well as rank which criteria are more important than others. MedMatch acts as your personal recruiter working around the clock to find you only the best matches.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="#testimonials" class="btn btn-grey scrollto">Sign Up</a>
+                                            <a href="#team" class="btn btn-grey scrollto">Next Screen</a>
+                                        </div>
+                                    </div>
+                                    <!--Image-right -->
+                                    <div class="col-md-7 col-sm-6 hidden-xs wow fadeInRight" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+                                        <img src="https://www.medmatchjobs.com/assets/new/talent/images/features/feature1-talent.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /End Tab-content -->
+                        <div class="tab-content" ng-class="tab=='tab2' ? 'active animated fadeIn':' animated fadeOut' " id="tab-feature-2" ng-switch-when = "tab2"  >
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Feature Description 2cols Text-Right with Icons -->
+                                    <div class="col-xs-12 col-sm-6 col-sm-push-6 col-lg-7 col-lg-push-5">
+                                        <h4>Real-time Job Matches Faster than Searching Through Job Boards</h4>
+                                        <p>Similar to dating sites, see top matches in an easy to read format. Let our sophisticated algorithm do the work for you instead of wasting time sorting through multiple listings</p>
+                                        <div class="tab-icon">
+                                            <div class="icon-sm">
+                                                <i class="icon icon-adjustments"></i>
+                                            </div>
+                                            <p class="large">Top Matches Summary</p>
+                                            <p> View a list of your top matches easily. We work hard for you, and only display your best suited matches.</p>
+                                        </div>
+                                        <div class="tab-icon">
+                                            <div class="icon-sm">
+                                                <i class="icon icon-target"></i>
+                                            </div>
+                                            <p class="large">Match Details</p>
+                                            <p> Quickly review the specifics of a job before applying. Salary, benefits, facility information, RVU data, and a lot more...all at the tips of your fingers!</p>
+                                        </div>
+                                    </div>
+                                    <!-- Image-Left -->
+                                    <div class="col-xs-12 col-sm-6 col-sm-pull-6 col-lg-5 col-lg-pull-7 hidden-xs wow fadeInLeft animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInLeft;">
+                                        <img src="https://www.medmatchjobs.com/assets/new/talent/images/features/feature2-talent.png" class="img-device" alt="">
+                                        <div class="form_container_2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / End Tab-content -->
+                        <div class="tab-content" ng-class="tab=='tab3' ? 'active animated fadeIn':' animated fadeOut'  " id="tab-feature-3" ng-switch-when = "tab3" >
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Feature Description 2cols Text-Left -->
+                                    <div class="col-md-5 col-sm-6">
+                                        <h4>Search through thousands of vacancies and apply to as many as you want within one place</h4>
+                                        <p>Fill out your profile, review your top matches, and click apply. That's it!  You never have to visit multiple job boards or hospital sites and go through manual ways of applying to a job. Do it all in one place, and with ease.  You only have to setup your profile once, and we do the rest.</p>
+                                    </div>
+                                    <!-- Image-Right -->
+                                    <div class="col-md-7 col-sm-6 hidden-xs wow fadeInRight animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+                                        <img src="https://www.medmatchjobs.com/assets/new/talent/images/features/feature3-talent.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /End Tab-content -->
+                        <div class="tab-content" ng-class="tab=='tab4' ? 'active animated fadeIn':' animated fadeOut'  " id="tab-feature-4" ng-switch-when = "tab4"  >
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Feature Description 2col Text-Left with Icons-->
+                                    <div class="col-md-7 col-sm-6">
+                                        <h4>Recorded video Interviews are easy to conduct and convenient.</h4>
+                                        <p>Stop repeating yourself when you speak to different recruiters, especially when the interviews are generic. When an in-house recruiter wants to know more than what's on your resume, they will offer an interview in the same system.</p>
+                                        <div class="tab-icon">
+                                            <div class="icon-sm">
+                                                <i class="icon icon-profile-male"></i>
+                                            </div>
+                                            <p class="large">Show them the real you</p>
+                                            <p>What better way to represent your personality than by showing potential employers with a personalized video. Camera shy? No problem, you can also respond to interview questions with audio or in writing.</p>
+                                        </div>
+                                        <div class="tab-icon">
+                                            <div class="icon-sm">
+                                                <i class="icon icon-compass"></i>
+                                            </div>
+                                            <p class="large">Convenient and no hassles</p>
+                                            <p>While at lunch, home, or on vacation, you can conduct the recorded interview when it best suits you. All you need is a webcam or a mobile device with a camera.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Image Right -->
+                                    <div class="col-md-5 col-sm-6 hidden-xs wow fadeInRight animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInRight;">
+                                        <img src="https://www.medmatchjobs.com/assets/new/talent/images/features/feature4-talent.png" class="img-device" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /End Tab-content -->
+                        <div class="tab-content" ng-class="tab=='tab5' ? 'active animated fadeIn':' animated fadeOut'  " id="tab-feature-5" ng-switch-when = "tab5" >
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Feature Description 2col Text both -->
+                                    <div class="col-xs-12">
+                                        <div class="col-sm-6">
+                                            <h4>If You Make the Cut.</h4>
+                                            <p>You will be offered onsite interviews through the system. You will have your choice of multiple dates, and you pick the one that best suits you. Confirmed in seconds, and that's it!</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4>If They Make the Cut!</h4>
+                                            <p>See exactly which facility, along with insights about the location, before committing. We research the area so you can make an informed decision before accepting on-site interviews.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Image below -->
+                                    <div class="col-xs-12 hidden-xs wow fadeInUp animated" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: fadeInUp;">
+                                        <img src="https://www.medmatchjobs.com/assets/new/talent/images/features/feature5-talent.png" class="img-device" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / End Tab-content -->
+                    </div>
+                    <!-- / End Panel-Container -->
+                </div>
+                <!-- / End Tabs -->
+            </div>
+            <!-- /End Col -->
+        </div>
+        <!-- /End Row -->
+    </section>
+    <!-- =============================
+        /END FEATURES TAB
+        ============================== -->
+    <!-- ==================================================
+        SIGNUP DIVIDER
+        ======================================================= -->
+    <section id="canvas-bg" class="dark-bg signup-divider">
+        <div class="container">
+            <div class="wrapper-lg">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-white">Setup your free no-risk, profile today!</h2>
+                        <p class="large text-white">BTW - Earn $500 for landing your dream job with us!</p>
+                        <!-- Handwritten text with arrow -->
+                        <p class="signup-handwritten text-white">Why wait? Start now! <br>Your matches are waiting</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <form id="" method="post" action="https://www.medmatchjobs.com/job_seeker/signup_1" role="form">
+                        <!-- Notification -->
+                        <p class="signup-success"><i class="icon icon_check_alt2"></i> <strong>Congratulation! Welcome to MedMatch. Check your email address.</strong></p>
+                        <p class="signup-failed"><i class="icon icon_close_alt2"></i><strong> Something went wrong! Insert correct value.</strong></p>
+                        <!-- Input fields -->
+                        <div class="form-group">
+                            <input type="text" name="name" id="signup-name" required="" class="form-control input-lg" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="signup-email" required="" class="form-control input-lg" placeholder="Enter your Email-Address">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" size="25" name="password" required="" id="signup-password" class="form-control input-lg" placeholder="Enter your Password">
+                        </div>
+                        <!-- Signup Button -->
+                        <button class="btn btn-color" type="submit">Join Today <i class="icon arrow_right"></i></button>
+                    </form>
+                </div>
+                <!-- /End Row -->
+            </div>
+            <!-- /End Wrapper -->
+        </div>
+        <!-- /End Container -->
+        <canvas width="1349" height="432" style="display: block;"></canvas>
+    </section>
+    <!-- =============================
+        /END SIGNUP SECTION
+        ============================== -->
+    <!-- =======================================================
+        TESTIMONIALS WITH PRESS/CLIENTS LOGOS
+        ============================================================ -->
+    <!-- =============================
+        /END TESTIMONIALS
+        ============================== -->
+    <!-- ==================================================
+        MOBILE DOWNLOAD SECTION
+        ======================================================= -->
+    <section class="mobile-download light-bg" id="mobile-download">
+        <div class="container">
+            <div class="wrapper-lg">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Mobile App Coming Soon</h2>
+                        <p class="large">Don't miss the chance to get our amazing mobile application. Stay connected anytime, anywhere.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Text and Mobile Download Buttons -->
+                    <div class="col-sm-6 col-md-4">
+                        <h3>Mobile Job Matching</h3>
+                        <p class="mobile-text">You get email and text notifications now, but with a mobile app, you'll have full control of your account and manage everything in real-time. Plus earn a $10 gift card for getting on the list and being one of the first to try it out.<span class="text-color">Even more convenient!</span></p>
+                        <!--                                <a href="#" class="btn btn-color"><i class="icon icon_cloud-download_alt"></i>Sign up of an Invitation!</a>-->
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <!-- Screenshot Carousel -->
+                        <div class="shot-container">
+                            <div id="owl-carousel-shots-phone" class="owl-carousel owl-theme" style="display: block; opacity: 1;">
+                                <div class="owl-wrapper-outer" >
+                                    <slick settings="slickConfig" slides-to-show=1 slides-to-scroll=1>
+                                        <div ng-repeat="s in data track by $index">
+                                            <div class="owl-item active" style="width: 244px;">
+                                                <div class="owl-container text-center shots-modal">
+                                                    <img src="{{s.path}}" alt="" title="this is the title">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </slick>
+                                </div>
+                                <!-- 							        <div class="owl-controls clickable">
+                                    <div class="owl-pagination">
+                                        <div class="owl-page active"><span class=""></span></div>
+                                        <div class="owl-page"> <span class=""></span></div>
+                                        <div class="owl-page"><span class=""></span></div>
+                                    </div>
+                                    <div class="owl-buttons">
+                                        <div class="owl-prev"><i class="icon arrow_carrot-left"></i></div>
+                                        <div class="owl-next"><i class="icon arrow_carrot-right"></i></div>
+                                    </div>
+                                    </div> -->
+                            </div>
+                            <!-- /End owl carousel-->
+                        </div>
+                        <!-- /End Container -->
+                    </div>
+                    <div class="col-sm-12 col-md-4 right-features">
+                        <!-- More Features -->
+                        <div class="col-sm-4 col-md-12">
+                            <h4>Match</h4>
+                            <p>Don't just search, match and apply to multiple jobs with a click of button.</p>
+                        </div>
+                        <div class="col-sm-4 col-md-12">
+                            <h4>Interview</h4>
+                            <p>Conduct your virtual interviews while on the go. As long as you have a front facing camera of course.</p>
+                        </div>
+                        <div class="col-sm-4 col-md-12">
+                            <h4>Schedule</h4>
+                            <p>Confirm onsite interview dates and chat with recruiters in real time. No more delays or scheduling conflicts!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /End Row -->
+            </div>
+            <!-- /End Wrapper -->
+        </div>
+        <!-- /End Container -->
+    </section>
+    <!-- =============================
+        /END MOBILE DOWNLOAD SECTION
+        ============================== -->
+    <!-- ==================================================
+        NEWSLETTER AND SOCIAL DIVIDER
+        ======================================================= -->
+    <section class="newsletter color-bg" id="newsletter">
+        <div class="container">
+            <div class="wrapper-sm">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- =========================
+                            Social Icons
+                            ============================== -->
+                        <div class="table">
+                            <div class="table-row">
+                                <div class="table-cell follow">
+                                    <h5 class="table-title">Follow Us</h5>
+                                </div>
+                                <div class="table-cell">
+                                    <ul class="social-list">
+                                        <li>
+                                            <a href="https://www.facebook.com/medmatchjobs?ref=hl">
+                                            <i class="icon icon-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/medmatchjobs">
+                                            <i class="icon icon-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://plus.google.com/b/111913152722756668503/+MedMatchJobsChicago/about">
+                                            <i class="icon icon-googleplus"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/company/medmatch-jobs?trk=top_nav_home">
+                                            <i class="icon icon-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /End Table-Cell -->
+                            </div>
+                            <!-- /End Table-Row -->
+                        </div>
+                        <!-- /End Table -->
+                    </div>
+                    <!-- /End Col -->
+                    <div class="col-md-6">
+                        <!-- =========================
+                            MAILCHIMP SUBSCRIPTION FORM
+                            ============================== -->
+                        <form class="mailchimp-subscribe" role="form" novalidate="true">
+                            <div class="table">
+                                <div class="table-row">
+                                    <div class="table-cell getnewsletter">
+                                        <h5 class="table-title">Offer: Want a $250 Amazon gift card?</h5>
+                                    </div>
+                                    <div class="table-cell">
+                                        <div class="input-group text-white">
+                                            <!-- Input Form -->
+                                            <input type="email" id="subscriber-email" name="EMAIL" placeholder="Your email address" class="form-control">
+                                            <!-- Submit Button -->
+                                            <span class="input-group-btn">
+                                            <button class="btn btn-color">Enter raffle</button>
+                                            </span>
+                                        </div>
+                                        <!-- /End Input Group -->
+                                    </div>
+                                    <!-- /End Table-Cell -->
+                                </div>
+                                <!-- /End Table-Row -->
+                            </div>
+                            <!-- /End Table -->
+                            <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
+                                <!-- Notifications -->
+                                <p class="mc-success"></p>
+                                <p class="mc-failed"></p>
+                            </div>
+                        </form>
+                        <!-- /End Mailchimp Subscribe Form -->
+                        <!-- =========================
+                            LOCAL SUBSCRIPTION FORM
+                            ============================== -->
+                        <!-- ALTERNATE USE: SAVE YOUR SUBSCRIBE LIST IN .TXT
+                            <form id="subscribe" role="form">
+                                <div class="table">
+                                    <div class="table-row">
+                                        <div class="table-cell getnewsletter">
+                                            <h5 class="table-title">Get the Newsletter</h5>
+                                        </div>
+                                    </div>
+                                    <div class="table-cell">
+                                        <div class="input-group">
+                                            <input type="email" id="s-email" name="email" placeholder="Your email address" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-color">Submit</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2">
+                                    <p class="subscription-success"><i class="icon icon_check_alt2"></i> You are successfully subscribed for our newsletter.</p>
+                                    <p class="subscription-failed"><i class="icon icon_close_alt2"></i> Something went wrong!</p>
+                                </div>
+                            </form>
+                            -->
+                    </div>
+                    <!-- /End Col -->
+                </div>
+                <!-- /End Row -->
+            </div>
+            <!-- End Wrapper -->
+        </div>
+        <!-- /End Container -->
+    </section>
+    <!-- =============================
+        /END NEWSLETTER SECTION
+        ============================== -->
+    <!-- ==================================================
+        FOOTER
+        ======================================================= -->
+    <footer class="footer dark-bg" id="footer" >
+        <div class="container">
+            <div class="wrapper-lg">
+                <div class="row">
+                    <!-- Footer Left Col -->
+                    <div class="col-md-5">
+                        <!-- Logo -->
+                        <a href="#top" class="scrollto" title="SmartMvp">
+                        <span class="text-logo">MedMatch Jobs</span>
+                        </a>
+                        <p class="footer-hero"><strong>Over 2,300</strong> jobseekers have pre-registered since January.<br>
+                            We've created a way for them to take back control of their futures.
+                        </p>
+                        <p class="footer-cta">What are you waiting for?
+                            <a href="#top" class="btn btn-color">Join the Revolution</a>
+                        </p>
+                    </div>
+                    <!-- Footer Contact Col -->
+                    <div class="col-md-3">
+                        <h5 class="text-white">Contact Info</h5>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="icon icon_mail"></i>
+                            </div>
+                            <div class="contact-content">
+                                <a href="mailto:info@medmatchjobs.com">info@medmatchjobs.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="icon icon_pin"></i>
+                            </div>
+                            <div class="contact-content">
+                                222 Merchandise Mart Plz<br>
+                                Chicago IL, 60654
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="icon icon_phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                312-635-4633 (text preferred)
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Right Col: Twitter Feed -->
+                    <div class="col-md-4">
+                        <h5 class="text-white">Recent Tweets and Updates</h5>
+                        <div class="tweet"><span>Loading...</span></div>
+                    </div>
+                    <!-- Footer Menu and Copy -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="footer-nav">
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.medmatchjobs.com/home/talentfaq">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.medmatchjobs.com/talent/terms_of_use">Terms of Use</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.medmatchjobs.com/talent/terms_condition">Privacy Policy</a>
+                                </li>
+                            </ul>
+                            <p class="footer-copy">© 2015 - MedMatch Co.<a href="http://themedept.com"> Real time physician job matching and recruitment technology.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- /End Wrapper -->
+        </div>
+        <!-- /End Container -->
+    </footer>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="popup-body">
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="vbox_mdl" class="vbox-overlay " style="min-height: 386px; opacity: 1;">
+    <div class="vbox-preloader">Loading...</div>
+    <div class="vbox-container">
+        <div class="vbox-content" style="margin-top: 40px; margin-bottom: 40px; opacity: 1;"><iframe class="venoframe figlio" allowfullscreen="" src="//www.youtube.com/embed/eknIvXx1hQU" style="padding: 0px; background: rgb(255, 255, 255);"></iframe></div>
+    </div>
+    <div class="vbox-title" ></div>
+    <div class="vbox-num" style="display: none;">0/0</div>
+    <div class="vbox-close" ng-click="vbox_mdl= false">X</div>
+    <div class="vbox-next" style="display: none;">next</div>
+    <div class="vbox-prev" style="display: none;">prev</div>
+</div>
+<!-- 	<script type="text/javascript">
+    var player =  document.getElementById('mbYTP_P1');
+    player.mute();
+    </script> -->
